@@ -27,7 +27,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.save
     # No need for app/views/tasks/create.html.erb
-    redirect_to task_path(@task)
+    redirect_to tasks_path(@task)
   end
 
   def edit
@@ -38,7 +38,7 @@ class TasksController < ApplicationController
     # @task = Task.find(params[:id])
     @task.update(task_params)
     # No need for app/views/tasks/update.html.erb
-    redirect_to task_path(@task)
+    redirect_to tasks_path(@task)
   end
 
   def destroy
